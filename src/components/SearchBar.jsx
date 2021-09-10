@@ -9,6 +9,7 @@ export default function SearchBar({onSearch}) {
       e.preventDefault();
       onSearch(name, location);
       setName("");
+      setLocation("");
     }}>
       <h2>Puede predecir la edad de un solo nombre o de varios</h2>
       <input

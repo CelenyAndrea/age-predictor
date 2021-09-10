@@ -8,24 +8,43 @@ import './App.css';
 function App() {
   const [names, setNames] = useState([]);
 
-  function onSearch(nombre) {
+  function onSearch(nombre, localidad) {
     //Llamado a la API
-    fetch(`https://api.agify.io?name=${nombre}`)
-      .then(r => r.json())
-      .then((res) => {
-        console.log(res)
-        if(res !== undefined){
-          const nombre = {
-            name: res.name,
-            age: res.age,
-            id: res.count,
-            country: res.country_id
-          };
-          setNames(oldNames => [...oldNames, nombre])
-        }else {
-          alert("Nombre no encontrado");
-        }
+    if(nombre && localidad) {
+      fetch(`https://api.agify.io?name=${nombre}&country_id=${localidad}`)
+        .then(r => r.json())
+        .then((res) => {
+          console.log(res)
+          if(res !== undefined){
+            const localidad = {
+              name: res.name,
+              age: res.age,
+              id: res.count,
+              country: res.country_id
+            };
+            setNames(oldNames => [...oldNames, localidad])
+          }
       });
+
+    }else if(nombre) {
+      fetch(`https://api.agify.io?name=${nombre}`)
+        .then(r => r.json())
+        .then((res) => {
+          console.log(res)
+          if(res !== undefined){
+            const nombre = {
+              name: res.name,
+              age: res.age,
+              id: res.count,
+              country: res.country_id
+            };
+            setNames(oldNames => [...oldNames, nombre])
+          }
+        });
+
+    }else{
+      alert("Nombre no encontrado");
+    }
   }
 
   function onClose(name) {

@@ -10,6 +10,7 @@ export default function Cards({names, onClose}) {
           key={nombre.id}
           name={nombre.name}
           age={nombre.age}
+          country_id={nombre.country}
           onClose={() => onClose(nombre.id)}
           id={nombre.id}
         /> )}
