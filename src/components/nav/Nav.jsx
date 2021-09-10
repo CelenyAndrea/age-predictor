@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Nav({onSearch}) {
   return (
-    <nav className={styles.container}> {/* id="divNav"> */}
+    <nav className={styles.container}> 
       <Link to='/'>
         <span className={styles.titulo}>
           Age Predictor

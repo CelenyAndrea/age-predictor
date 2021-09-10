@@ -9,16 +9,20 @@ export default function SearchBar({onSearch}) {
       onSearch(name);
       setName("");
     }}>
-      {/* <div className={styles.container}> */}
+      <h2>Puede predecir la edad de un solo nombre o de varios</h2>
       <input
         type="text" 
-        placeholder="..." 
+        placeholder="Nombre..." 
         value={name}
         onChange={e => setName(e.target.value)}
       />
-      {/* <button className={styles.boton} onClick={() => onSearch("Buscando...")}>Agregar</button> */}
-      <input className={styles.boton} type="submit" value="Agregar" />
-      {/* </div> */}
+      {/* <input
+        type="text" 
+        placeholder="Localización..." 
+        value={name}
+        onChange={e => setName(e.target.value)}
+      /> */}
+      <input className={styles.boton} type="submit" value="Predecir" />
     </form>
   );
 }
