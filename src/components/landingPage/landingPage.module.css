@@ -1,0 +1,52 @@
+.landingpage {
+    background-image: url('https://st2.depositphotos.com/17620692/43036/v/600/depositphotos_430361676-stock-illustration-abstract-black-overlap-background-concept.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    overflow:scroll;
+    color:blanchedalmond;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 50px;
+    margin: 100px;
+    margin-bottom: 15px;
+}
+  
+.text{
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0 100px 0;
+    margin-bottom: 15px;
+}
+
+.button {
+    color: white;
+    background-color:slateblue;
+    border-radius: 15px;
+    padding: 10px 0;
+    margin-left: 700px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.msgContainer{
+    padding-block-end:400px;
+    text-align:left;
+    line-height: 70px;
+    margin-right: 700px;
+    animation: moverDerecha 2s ease-in;
+}
+
+.button:hover{
+    background-color:steelblue;
+    transition: all .3s;
+}

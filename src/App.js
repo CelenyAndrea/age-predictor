@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from './components/nav/Nav'
 import { Route } from 'react-router-dom';
 import Cards from './components/cards/Cards';
+import LandingPage from './components/landingPage/LandingPage';
 
 import './App.css';
 
@@ -54,11 +55,15 @@ function App() {
   return (
     <div className="App">
       <Route 
-        path='/'
+        exact path='/' 
+        component={LandingPage} 
+      />
+      <Route 
+        path='/nav'
         render={() => <Nav onSearch={onSearch} />}
       />
       <Route 
-        exact path='/'
+        exact path='/nav'
         render={() => <Cards names={names} onClose={onClose} />}
       />
     </div>
