@@ -11,21 +11,27 @@ export default function SearchBar({onSearch}) {
       setName("");
       setLocation("");
     }}>
-      <h2>Puede predecir la edad de un solo nombre o de varios</h2>
-      <input
-        type="text" 
-        placeholder="Nombre..." 
-        value={name}
-        onChange={e => setName(e.target.value)}
-        required
-      />
-      <input
-        type="text" 
-        placeholder="Localización..." 
-        value={location}
-        onChange={e => setLocation(e.target.value)}
-      />
-      <input className={styles.boton} type="submit" value="Predecir" />
+      <div className={styles.elemento} >
+        <label>Nombre</label>
+        <input
+          type="text" 
+          value={name}
+          onChange={e => setName(e.target.value)}
+          required
+        />
+      </div>
+      <div className={styles.elemento} >
+        <label>Localización</label>
+        <input
+          type="text" 
+          placeholder="Opcional..." 
+          value={location}
+          onChange={e => setLocation(e.target.value)}
+        />
+      </div>
+      <div className={styles.elemento} >
+      <input type="submit" value="Calcular Edad" />
+      </div>
     </form>
   );
 }

@@ -4,3 +4,11 @@
   box-sizing: border-box;
   font-family: 'Encode Sans Expanded', sans-serif;
 }
+
+html{
+  height: 100%;
+}
+
+body{
+  background: linear-gradient(#56078b, #5f55e7);
+}

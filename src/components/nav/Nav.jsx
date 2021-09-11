@@ -7,9 +7,9 @@ function Nav({onSearch}) {
   return (
     <nav className={styles.container}> 
       <Link to='/'>
-        <span className={styles.titulo}>
+        <h2 className={styles.titulo}>
           Age Predictor
-        </span>
+        </h2>
       </Link>
       <SearchBar onSearch={onSearch} />
     </nav>

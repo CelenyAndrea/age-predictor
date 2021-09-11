@@ -1,31 +1,46 @@
 .container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #126e82;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin: 15px;
+    background: rgba(0,0,0, .5);
+    margin: 50px auto;
+    width: 500px;
+    padding: 30px;
+    text-decoration:none;
+    border-radius: 10px;
 }
   
 .titulo {
-    font-size: 23px;
-    color: #F1F3CE;
-    text-decoration:none;
-    text-align: left;
-    margin-right: auto;
+    text-decoration:underline; 
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: #4cc9f0;
+    text-align: center;
+}
+
+.elemento{
+    color:aliceblue;
+}
+
+.elemento input{
+    width: 100%;
+    padding: 10px 0;
+    color:aliceblue;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid aliceblue;
+    margin-bottom: 30px;
 }
   
-.boton {
+.elemento input[type="submit"] {
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 20px;
     align-items: center;
-    background-color: #132c33;
-    color: #F1F3CE;
+    background-color: #f72585;
+    color: aliceblue;
     padding: 5px 20px;
-    margin: 5px;
+    margin: 5px auto;
 }
   
-.boton:hover {
+.elemento input[type="submit"]:hover {
     background-color: #D0E1F9;
     color: #00293C;
 }

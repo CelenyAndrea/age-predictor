@@ -6,16 +6,15 @@ export default function Card({name, age, country_id, onClose}) {
     <div className={styles.card}>
       <button onClick={onClose} className={styles.boton}>x</button>
       <div>
-        <h5 className="card-title">{name}</h5>
+        <h5 className={styles.titulo}>{name}</h5>
       </div>
       <div>
         <div className={styles.container}>
-          <div>
-            <p>Age</p>
-            <p>{age}</p>
+          <div className={styles.elemento}>
+            <h2>Age: {age}</h2>
           </div>
-          <div>
-            <p>{country_id}</p>
+          <div className={styles.elemento}>
+            <h2>{country_id}</h2>
           </div>
         </div>
       </div>
